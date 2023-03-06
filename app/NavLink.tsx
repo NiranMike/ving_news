@@ -7,7 +7,7 @@ type Props ={
 }
 const NavLink = ({category, isActive}: Props) => {
   return (
-    <Link href={`/news/${category}`} className='NavLink'>
+    <Link href={`/news/${category}`} className={`navLink ${isActive && 'underline decoration-[#EF4E1B] underline-offset-4 font-bold text-lg'}`}>
         {category}
     </Link>
   )
