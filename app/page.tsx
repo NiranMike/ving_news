@@ -7,7 +7,8 @@ const Home = async () => {
   console.log(news)
   return (
       <div>
-          {/* news list */}
+      {/* news list */}
+      
     </div>
   )
 }
