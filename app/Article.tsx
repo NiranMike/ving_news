@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import ReadMoreButton from './ReadMoreButton';
+import LiveTimestamp from './LiveTimestamp';
 
 type Props = {
     article: Article;
@@ -8,7 +9,7 @@ type Props = {
 
 const Article = ({article}:Props) => {
   return (
-    <article className='bg-slate-100 dark:bg-[#12151C] flex flex-col rounded-lg shadow-sm hover:scale-105 hover:shadow-lg hover:bg-slate-200 transition-all duration-200 ease-out'>
+    <article className='bg-slate-100 dark:bg-[#12151C] flex flex-col rounded-lg shadow-lg md:shadow-xl hover:scale-105 hover:shadow-lg hover:bg-slate-200 transition-all duration-200 ease-out'>
         {
           article.image && (
               <img 
@@ -29,7 +30,9 @@ const Article = ({article}:Props) => {
             
             <footer className='text-xs text-right ml-auto flex space-x-1 pt-5 italic text-gray-400'>
               <p>{ article.source } -</p>
-              <p>{ article.published_at }</p>
+              <p>
+                <LiveTimestamp time={ article.published_at } />
+              </p>
             </footer>
           </div>
           
