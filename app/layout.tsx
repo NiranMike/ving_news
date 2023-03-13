@@ -1,5 +1,6 @@
 import Header from './Header'
 import '../styles/globals.css'
+import Provider from './Provider'
 
 export const metadata = {
   title: 'Ving News',
@@ -13,13 +14,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-
-      <body className='body dark:bg-[#12151C] transition-all duration-700'>
-        <Header />
-        <div className='max-w-6xl mx-auto '>
-          {children}
-        </div>
+      <Provider>
+        <body className='body dark:bg-[#12151C] transition-all duration-700'>
+          <Header />
+          <div className='max-w-6xl mx-auto '>
+            {children}
+          </div>
       </body>
+      </Provider>
+      
     </html>
   )
 }
