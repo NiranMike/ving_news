@@ -10,6 +10,12 @@
         capitalize hover:scale-110 transition-transform 
         duration-200 dark:text-[#DDD9D8] ease-out text-[#12151C]
     }
+
+    .headerTitle{
+        @apply text-4xl font-serif capitalize px-10 pt-5 underline
+        decoration-[#EF4E1B] decoration-2 underline-offset-4
+        decoration-double
+    }
 }
 
 .body{
